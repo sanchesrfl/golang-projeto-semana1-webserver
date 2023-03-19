@@ -9,7 +9,7 @@ import (
 
 func InsertData(nome, cidade string) error {
 
-	//insira o nome do schema e password
+	//insira o nome do schema e password na sring de conexão
 	dbConnectionString := fmt.Sprintf("root:%s@tcp(127.0.0.1:3306)/<schema>", "<password>")
 
 	db, err := sql.Open("mysql", dbConnectionString)
