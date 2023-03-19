@@ -8,7 +8,7 @@ import (
 )
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
-
+	//aponta exceções no parse
 	if err := r.ParseForm(); err != nil {
 
 		fmt.Fprintf(w, "ParseForm() err: %v", err)
@@ -40,7 +40,8 @@ func main() {
 	http.HandleFunc("/form", formHandler)
 
 	fmt.Printf("Iniciando web-servidor, na porta 8080.\n")
-
+	
+	//aponta exceções de inicialização do servidor
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 
 		log.Fatal(err)
