@@ -4,14 +4,14 @@ Repositório do mini-projeto da primeira semana de aula ministrada para a turma 
 
 Objetivos:
 
-- Apresentar a linguagem de maneira panorâmica orientado por projeto prático (webserver).
+- Apresentar a linguagem de maneira panorâmica orientado por projeto prático.
 
 --- 
 
 
 ### Como executar o projeto.
 
-#### Rodar MySQL no Docker localmente
+#### Rodar MySQL no Docker localmente.
 
 requerimentos:
 
@@ -46,15 +46,25 @@ CREATE DATABASE <nome>;
 ```
 
 - selecione a database
+
+```bash
 USE <database>;
+```
+
 
 - para verificar se sua tabela foi criada posteriormente pelo webserver execute:
 
+```bash
 SHOW TABLES;
+```
+
 
 - para uma query simples validando se os dados foram registrados pelo webserver
 
+```bash
 SELECT * FROM <nome-da-table>
+```
+
 
 ---
 
