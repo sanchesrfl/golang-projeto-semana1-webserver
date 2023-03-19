@@ -13,7 +13,7 @@ Objetivos:
 
 #### Rodar MySQL no Docker localmente.
 
-requerimentos:
+Requerimentos:
 
 1. Docker (https://docs.docker.com/engine/install/)
 2. MySQL CLI (https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html)
@@ -21,45 +21,45 @@ requerimentos:
 ---
 Com os requerimentos satisfeitos, execute os próximos passos:
 
-- baixar imagem atual mysql
+- Baixar imagem atual mysql
 
 ```bash
 docker pull mysql:latest
 ```
 
-- rodar mysql 
+- Rodar mysql 
 
 ```bash
 docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 -d mysql:latest
 ```
 
-- conecte no MySQL via CLI
+- Conecte no MySQL via CLI
 
 ```bash
 mysql -u root -p<password> -h 127.0.0.1 -P 3306
 ```
 
-- crie uma nova base de dados (schema)
+- Crie uma nova base de dados (schema)
 
 ```bash
 CREATE DATABASE <nome>;
 ```
 
-- selecione a database
+- Selecione a database
 
 ```bash
 USE <database>;
 ```
 
 
-- para verificar se sua tabela foi criada posteriormente pelo webserver execute:
+- Para verificar se sua tabela foi criada posteriormente pelo webserver execute:
 
 ```bash
 SHOW TABLES;
 ```
 
 
-- para uma query simples validando se os dados foram registrados pelo webserver
+- Para uma query simples validando se os dados foram registrados pelo webserver
 
 ```bash
 SELECT * FROM <nome-da-table>
