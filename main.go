@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"nomealeatorio/db"
 )
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
@@ -17,6 +18,8 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Post request foi bem sucedido!\n")
 	name := r.FormValue("name")
 	address := r.FormValue("address")
+	//insere dados de input do usuário na database MySQL
+	db.InsertData(name, address)
 
 	fmt.Fprintf(w, "Nome = %s\n", name)
 	fmt.Fprintf(w, "Cidade = %s\n", address)
