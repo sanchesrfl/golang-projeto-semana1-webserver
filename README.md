@@ -51,8 +51,13 @@ CREATE DATABASE <nome>;
 USE <database>;
 ```
 
+- Crie a tabela de users;
 
-- Para verificar se sua tabela foi criada posteriormente pelo webserver execute:
+```bash
+CREATE TABLE IF NOT EXISTS mytable (nome VARCHAR(255), cidade VARCHAR(255));
+```
+
+- Para verificar se sua tabela foi criada execute:
 
 ```bash
 SHOW TABLES;
