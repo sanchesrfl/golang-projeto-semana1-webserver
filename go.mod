@@ -1,4 +1,4 @@
-module nomealeatorio
+module github.com/sanchesrfl/golang-projeto-semana1-webserver
 
 go 1.18
 

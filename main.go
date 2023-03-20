@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"nomealeatorio/db"
+
+	"github.com/sanchesrfl/golang-projeto-semana1-webserver/db"
 )
 
 func formHandler(w http.ResponseWriter, r *http.Request) {
@@ -40,7 +41,7 @@ func main() {
 	http.HandleFunc("/form", formHandler)
 
 	fmt.Printf("Iniciando web-servidor, na porta 8080.\n")
-	
+
 	//aponta exceções de inicialização do servidor
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 
